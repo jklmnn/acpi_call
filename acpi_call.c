@@ -270,7 +270,7 @@ static int acpi_proc_write( struct file *filp, const char __user *buff,
     char *method;
 
     if (len > sizeof(input) - 1) {
-        printk(KERN_ERR "acpi_call: Input too long! (%lu)\n", len);
+        printk(KERN_ERR "acpi_call: Input too long! (%u)\n", len);
         return -ENOSPC;
     }
 
